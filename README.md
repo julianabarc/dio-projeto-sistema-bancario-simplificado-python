@@ -26,6 +26,9 @@ Regras observadas:
 
 ## 3.. 2.. 1.. Python Started! 👩🏽‍💻🥳🎉
 
-"Dê um passo de cada vez, e você chegará ao seu destino."
+**"Dê um passo de cada vez, e você chegará ao seu destino."**
 
-![Apresentação](/static/apresentacao.mp4)
+<br>
+
+https://github.com/julianabarc/dio-projeto-sistema-bancario-simplificado-python/assets/107651816/97ed374e-b7ce-43a2-a851-e20d5efc1969
+
