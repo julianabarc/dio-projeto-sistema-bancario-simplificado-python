@@ -27,3 +27,5 @@ Regras observadas:
 ## 3.. 2.. 1.. Python Started! 👩🏽‍💻🥳🎉
 
 "Dê um passo de cada vez, e você chegará ao seu destino."
+
+![Apresentação](/static/apresentacao.mp4)
