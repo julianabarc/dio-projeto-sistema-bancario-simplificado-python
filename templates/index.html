@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Bancário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="aviso">
+        <p><b>ATENÇÃO:</b> Cuidado com golpes! Não solicitamos senhas e informações confidenciais por telefone.</p>
+    </div>
+
+    <header>
+        <div class="flex-container menu">
+            <ul class="list-items">
+                <li><img src="{{ url_for('static', filename='logo-lla.jpg') }}" alt="Logo do Banco" height="75"></li>
+                <li><h2>Internet Banking</h2></li>
+            </ul>
+            <ul class="list-items">
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#ajuda">Ajuda</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="flex-container" id="planos">
+        <h2>Efetuar Depósito</h2>
+        <form action="/deposito" method="post">
+            <label for="valor">Valor:</label>
+            <input type="number" name="valor" step="0.01" min="0.01" required>
+            <button type="submit">&nbsp;Depositar&nbsp;</button>
+        </form>
+        <br>
+        <br>
+        <h2>Realizar Saque</h2>
+        <form action="/saque" method="post">
+            <label for="valor">Valor:</label>
+            <input type="number" name="valor" step="0.01" min="0.01" required>
+            <button type="submit">&nbsp;&nbsp;&nbsp;&nbsp;Sacar&nbsp;&nbsp;&nbsp;&nbsp;</button>
+        </form>
+        <br>
+        <br>
+        <h2>Extrato da Conta</h2>
+        <ul>
+            {% if extrato %}
+                {% for transacao in extrato %}
+                    <li>{{ transacao }}</li>
+                {% endfor %}
+            {% else %}
+                <li>Não foram realizadas movimentações</li>
+            {% endif %}
+        </ul>
+    
+        {% if mensagem %}
+            <p>{{ mensagem }}</p>
+        {% endif %}
+    </div>
+
+    <div class="baixe-app">
+        <p>Baixe o app:</p>
+        <div class="download">
+            <a href="#" class="app-download"></a>
+            <a href="#" class="app-download"></a>
+        </div>
+    </div>
+
+    <div class="contatos">
+        <p>
+            <li class="itens-contatos">Central de Atendimento:&nbsp;<b>(27) 3003-XXXX&nbsp;|&nbsp;</b></li>
+            <li class="itens-contatos"><b>0800 XXX XXX&nbsp;</b></li>
+        </p>
+    </div>
+
+    <footer>
+        <div class="flex-container footer">
+            <p>&copy; 2024 Python | CSS Flexbox</p>
+            <p>Desenvolvido por: Juliana Barcelos</p>
+        </div>
+    </footer>
+</body>
+</html>
